@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/dashboard"
+            android:icon="@drawable/ic_dashboard_black_24dp"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/report"
+            android:icon="@drawable/ic_report_black_24dp"
+            android:title="Reportes" />
+        <item
+            android:id="@+id/smartFilter"
+            android:icon="@drawable/ic_smartfilter_black_24dp"
+            android:title="Filtro Inteligente" />
+        <item
+            android:id="@+id/mapLocation"
+            android:icon="@drawable/ic_map_black_24dp"
+            android:title="Ubicación de Equipos" />
+    </group>
+
+    <item android:title="Opciones Adicionales">
+        <menu>
+            <item
+                android:id="@+id/setting"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="Ajuste" />
+            <item
+                android:id="@+id/aboutUs"
+                android:icon="@drawable/ic_info_black_24dp"
+                android:title="Acerca de Nosotros"/>
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/ic_logout_black_24dp"
+                android:title="Cerrar Sesión" />
+        </menu>
+    </item>
+
+</menu>
