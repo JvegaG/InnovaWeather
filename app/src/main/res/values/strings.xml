@@ -23,4 +23,15 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="enterpriseLogo">Logo de la Empresa</string>
+
+    <!-- CardView -->
+    <string name="connected">Online:</string>
+    <string name="Vie"> Vie:\n1.2 Km/h</string>
+    <string name="Pre"> Pre:\n1000.9 mb</string>
+    <string name="llu"> Llu:\n3.2 mm</string>
+    <string name="UV">UV:\n5.3</string>
+    <string name="lastUpdate">fecha, Hora</string>
+
+
+
 </resources>
