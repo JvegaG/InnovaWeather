@@ -82,6 +82,7 @@ public class DashboardFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        //
 
         View vista = inflater.inflate(R.layout.fragment_dashboard, container, false);
 
