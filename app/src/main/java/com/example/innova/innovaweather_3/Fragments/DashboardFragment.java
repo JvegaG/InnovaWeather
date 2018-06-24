@@ -1,14 +1,27 @@
 package com.example.innova.innovaweather_3.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.innova.innovaweather_3.Adapters.Adaptador;
+import com.example.innova.innovaweather_3.ClassesAndInterfaces.DidStation.DidInterface;
+import com.example.innova.innovaweather_3.ClassesAndInterfaces.fuenteDashboard;
+import com.example.innova.innovaweather_3.DetalleActivity;
 import com.example.innova.innovaweather_3.R;
+
+import java.util.ArrayList;
+
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 /**
@@ -30,6 +43,9 @@ public class DashboardFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    ArrayList<fuenteDashboard> Lista;
+    RecyclerView recyclerView;
 
     public DashboardFragment() {
         // Required empty public constructor
@@ -63,10 +79,61 @@ public class DashboardFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dashboard, container, false);
+
+        View vista = inflater.inflate(R.layout.fragment_dashboard, container, false);
+
+        Lista = new ArrayList<>();
+        recyclerView = vista.findViewById(R.id.dashboardRecyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext())) ;
+
+        //Ejecutamos el metodo - contiene la lista de estaciones
+        datosStation();
+
+        Adaptador adaptador = new Adaptador(Lista);
+        recyclerView.setAdapter(adaptador);
+
+        //para que entre a la vista detalle
+
+        adaptador.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), DetalleActivity.class));
+            }
+        });
+
+        return vista;
+    }
+
+    /**
+     * Datos para mostrar en el dashboard
+     */
+    private void datosStation() {
+
+        String url = "http://innovat.com.pe/InnovaWeather/api/";
+        Retrofit DidBuilder = new Retrofit.Builder()
+                .baseUrl(url)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        DidInterface didInterface = DidBuilder.create(DidInterface.class);
+
+
+
+        Lista.add(new fuenteDashboard("Innova-T","Trujillo, La Libertad","74.2",
+                "1.6","230", "0.6","19","Online:","11 Jul 2018",
+                "",R.drawable.weather_fog));
+        Lista.add(new fuenteDashboard("Gloria","Olmos, Olmos","74.2",
+                "1.6","230", "0.6","19","Online:","11 Jul 2018",
+                "",R.drawable.weather_partlycloudy));
+        Lista.add(new fuenteDashboard("Laredo","Laredo, La Libertad","74.2",
+                "1.6","230", "0.6","19","Online:","11 Jul 2018",
+                "",R.drawable.weather_pouring));
+        Lista.add(new fuenteDashboard("ViruFruit","Virú, La Libertad","74.2",
+                "1.6","230", "0.6","19","Online:","11 Jul 2018",
+                "",R.drawable.weather_sunny));
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -107,4 +174,6 @@ public class DashboardFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+
 }

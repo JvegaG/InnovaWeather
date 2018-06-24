@@ -7,35 +7,35 @@
         <item
             android:id="@+id/dashboard"
             android:icon="@drawable/ic_dashboard_black_24dp"
-            android:title="Dashboard" />
+            android:title="@string/dashboard" />
         <item
             android:id="@+id/report"
             android:icon="@drawable/ic_report_black_24dp"
-            android:title="Reportes" />
+            android:title="@string/reportes" />
         <item
             android:id="@+id/smartFilter"
             android:icon="@drawable/ic_smartfilter_black_24dp"
-            android:title="Filtro Inteligente" />
+            android:title="@string/filtro_inteligente" />
         <item
             android:id="@+id/mapLocation"
             android:icon="@drawable/ic_map_black_24dp"
-            android:title="Ubicación de Equipos" />
+            android:title="@string/ubicaci_n_de_equipos" />
     </group>
 
-    <item android:title="Opciones Adicionales">
+    <item android:title="@string/opciones_adicionales">
         <menu>
             <item
                 android:id="@+id/setting"
                 android:icon="@drawable/ic_settings_black_24dp"
-                android:title="Ajuste" />
+                android:title="@string/ajustes" />
             <item
                 android:id="@+id/aboutUs"
                 android:icon="@drawable/ic_info_black_24dp"
-                android:title="Acerca de Nosotros"/>
+                android:title="@string/acerca_de_nosotros"/>
             <item
                 android:id="@+id/logout"
                 android:icon="@drawable/ic_logout_black_24dp"
-                android:title="Cerrar Sesión" />
+                android:title="@string/logout" />
         </menu>
     </item>
 

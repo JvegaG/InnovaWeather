@@ -7,8 +7,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.innova.innovaweather_3.R;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -62,10 +66,35 @@ public class AboutUsFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
+        View aboutUs = inflater.inflate(R.layout.fragment_about_us, container, false);
+
+        TextView description = aboutUs.findViewById(R.id.txt_aboutUs);
+        CircleImageView web = aboutUs.findViewById(R.id.circle_web);
+        CircleImageView facebook = aboutUs.findViewById(R.id.circle_facebook);
+
+        web.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /*Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://innovat.com.pe"));
+                startActivity(intent);*/
+                Toast.makeText(getContext(),"Bienvenido al Navegador", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
+        facebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"Bienvenido a Facebook", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        description.setText(R.string.aboutUs);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_about_us, container, false);
+        return aboutUs;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView_contenedor"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@drawable/imagen1_muypeq">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#77000000"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/StationName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="StationName"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/Location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:textSize="12sp"/>
+
+            <!-- Linea Separadora -->
+            <TextView
+                android:id="@+id/line"
+                style="?android:attr/listSeparatorTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/dataCardView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:layout_marginTop="1dp">
+
+                <RelativeLayout
+                    android:id="@+id/Parametros"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="6dp"
+                    android:paddingTop="6dp"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.55">
+
+                    <ImageView
+                        android:id="@+id/ic_Hum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/water_percent" />
+
+                    <TextView
+                        android:id="@+id/txtHum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@id/ic_Hum"
+                        android:text="@string/txthum"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="9sp"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/Sen_Hum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtHum"
+                        android:layout_toEndOf="@id/ic_Hum"
+                        android:text="@string/Hum"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="9sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/unit_Hum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/Sen_Hum"
+                        android:layout_marginStart="3dp"
+                        android:layout_toEndOf="@+id/Sen_Hum"
+                        android:text="@string/unit_Hum"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="9sp"
+                        tools:ignore="SmallSp" />
+
+                    <ImageView
+                        android:id="@+id/ic_ET"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_toEndOf="@id/ic_Hum"
+                        android:src="@drawable/weather_evapotranspiracion" />
+
+                    <TextView
+                        android:id="@+id/txtET"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/txtHum"
+                        android:layout_marginStart="2dp"
+                        android:layout_toEndOf="@id/ic_ET"
+                        android:text="@string/txtet"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="9sp"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/Sen_ET"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtET"
+                        android:layout_marginStart="2dp"
+                        android:layout_toEndOf="@id/ic_ET"
+                        android:text="@string/ET"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="9sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/unit_ET"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/Sen_ET"
+                        android:layout_marginStart="2dp"
+                        android:layout_toEndOf="@id/Sen_ET"
+                        android:text="@string/unit_ET"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="9sp"
+                        tools:ignore="SmallSp" />
+
+                    <ImageView
+                        android:id="@+id/ic_Rad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ic_Hum"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/weather_rad" />
+
+                    <TextView
+                        android:id="@+id/txtRad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Sen_Hum"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@id/ic_Rad"
+                        android:text="@string/txtrad"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="9sp"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/Sen_Rad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtRad"
+                        android:layout_marginStart="4dp"
+                        android:layout_toEndOf="@id/ic_Rad"
+                        android:text="@string/Rad"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="9sp"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/unit_Rad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/Sen_Rad"
+                        android:layout_marginStart="2dp"
+                        android:layout_toEndOf="@id/Sen_Rad"
+                        android:text="@string/unit_Rad"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="9sp"
+                        tools:ignore="SmallSp" />
+
+                    <ImageView
+                        android:id="@+id/ic_UV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/weather_uv"
+                        android:layout_below="@id/ic_ET"
+                        android:layout_alignStart="@id/ic_ET"
+                        android:layout_marginTop="10dp" />
+
+                    <TextView
+                        android:id="@+id/txtUV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UV:"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="9sp"
+                        android:layout_alignStart="@id/txtET"
+                        android:layout_alignBaseline="@id/txtRad"
+                        />
+
+                    <TextView
+                        android:id="@+id/Sen_UV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/Sen_Rad"
+                        android:layout_alignStart="@id/Sen_ET"
+                        android:textColor="@color/colorAccent"
+                        android:text="@string/UV"
+                        android:textSize="9sp"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/isOnlineOrOffline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:text="Online:"
+                        android:textColor="@color/colorAccent"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/lastUpdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="4dp"
+                        android:layout_toEndOf="@id/isOnlineOrOffline"
+                        android:text="@string/lastUpdate"
+                        android:textColor="@color/colorAccent"
+                        tools:ignore="SmallSp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tempPart"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintWidth_percent="0.45"
+                    app:layout_constraintStart_toEndOf="@id/Parametros"
+                    android:paddingTop="8dp"
+                    android:paddingLeft="8dp">
+
+
+                    <ImageView
+                        android:id="@+id/img_weather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/weather_fog"
+                        android:layout_marginTop="18dp"
+                        android:layout_toStartOf="@+id/cardview_senTemp"
+                        />
+
+                    <TextView
+                        android:id="@+id/cardview_senTemp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="19"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="45sp"
+                        android:textStyle="bold"
+                        android:layout_centerHorizontal="true"/>
+
+                    <TextView
+                        android:id="@+id/temp_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/cardview_senTemp"
+                        android:text="°C"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"/>
+
+                    <TextView
+                        android:id="@+id/time_error"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="Time error"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

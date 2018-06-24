@@ -3,12 +3,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.AboutUsFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.AboutUsFragment"
+    android:padding="15dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="AboutUs" />
+        android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/logo_aboutUs"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:src="@drawable/logo_innova"/>
+
+        <TextView
+            android:id="@+id/txt_aboutUs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo_aboutUs"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/encuentranos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/encuentranos"
+            android:layout_below="@id/txt_aboutUs"
+            android:layout_marginTop="10dp"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circle_web"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/web_24dp"
+            app:civ_border_color="#E0E0E0"
+            app:civ_border_width="1dp"
+            android:layout_below="@id/encuentranos"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="8dp"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circle_facebook"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:civ_border_color="#E0E0E0"
+            app:civ_border_width="1dp"
+            android:src="@drawable/facebook"
+            android:layout_toEndOf="@id/circle_web"
+            android:layout_below="@id/encuentranos"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="12dp"/>
+
+    </RelativeLayout>
 </FrameLayout>

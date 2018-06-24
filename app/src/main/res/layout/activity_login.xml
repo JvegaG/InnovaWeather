@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo7"
-    android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
@@ -26,8 +25,8 @@
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="120dp"
-        android:src="@drawable/logo_innova"
-        android:contentDescription="@string/enterpriseLogo"/>
+        android:contentDescription="@string/enterpriseLogo"
+        android:src="@drawable/logo_innova" />
 
 
     <ScrollView
@@ -112,16 +111,16 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:text="@string/help"
-        android:textColor="@color/colorAccent" />
+        android:textColor="@color/colorAccent"
+        android:background="@android:color/transparent"/>
 
     <!-- Text CopyRight -->
     <TextView
         android:id="@+id/txt_copy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn_help"
+        android:layout_above="@id/txt_todos"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
         android:text="© Copyright 2018."
         android:textColor="@color/colorAccent" />
 
@@ -129,8 +128,9 @@
         android:id="@+id/txt_todos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txt_copy"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
         android:text="Todos los Derechos Reservados"
         android:textColor="@color/colorAccent" />
 

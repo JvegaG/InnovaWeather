@@ -1,0 +1,1248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nubes2"
+    android:orientation="vertical"
+    tools:context=".DetalleActivity">
+
+    <!-- Contenido Total  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- ############### RESUMEN ############### -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            android:background="#4a000000"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/StationName_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="StationName"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Location_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/StationName_detail"
+                android:text="Localization"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
+
+            <!-- Linea Separadora -->
+            <TextView
+                android:id="@+id/line"
+                style="?android:attr/listSeparatorTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/Location_detail"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorAccent" />
+
+            <ImageView
+                android:id="@+id/img_weather_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:layout_marginTop="42dp"
+                android:layout_toStartOf="@id/senTemp_detail"
+                android:src="@drawable/weather_fog" />
+
+            <TextView
+                android:id="@+id/senTemp_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="2dp"
+                android:text="19.4"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorAccent"
+                android:textSize="70sp" />
+
+            <TextView
+                android:id="@+id/unitTemp_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/senTemp_detail"
+                android:text="°C"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorAccent"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/txt_senseTer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/img_weather_detail"
+                android:layout_below="@id/senTemp_detail"
+                android:text="Sensación Térmica:"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sens_termi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/txt_senseTer"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/txt_senseTer"
+                android:text="17.1"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/txt_max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/txt_senseTer"
+                android:layout_below="@id/txt_senseTer"
+                android:text="Max:"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tmp_max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/txt_max"
+                android:layout_marginStart="2dp"
+                android:layout_toEndOf="@id/txt_max"
+                android:text="19.8"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txt_unit_max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/tmp_max"
+                android:layout_marginLeft="2dp"
+                android:layout_toEndOf="@id/tmp_max"
+                android:text="°C a"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/time_max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/txt_unit_max"
+                android:layout_marginLeft="2dp"
+                android:layout_toEndOf="@id/txt_unit_max"
+                android:text="11:15 am"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txt_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/txt_senseTer"
+                android:layout_below="@id/txt_max"
+                android:text="Min:"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tmp_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/txt_min"
+                android:layout_marginStart="2dp"
+                android:layout_toEndOf="@id/txt_min"
+                android:text="16.4"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txt_unit_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/tmp_min"
+                android:layout_marginLeft="2dp"
+                android:layout_toEndOf="@id/tmp_min"
+                android:text="°C a"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/time_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/txt_unit_min"
+                android:layout_marginLeft="2dp"
+                android:layout_toEndOf="@id/txt_unit_min"
+                android:text="4:35 am"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txt_lastupdate_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/lastupdate_detail"
+                android:layout_alignStart="@id/lastupdate_detail"
+                android:text="Última Actualización:"
+                android:textColor="@color/colorAccent"
+                android:textSize="7sp" />
+
+            <TextView
+                android:id="@+id/lastupdate_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/line2"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp"
+                android:text="Jun 13 2018, 10:30pm"
+                android:textColor="@color/colorAccent"
+                android:textSize="7sp" />
+
+            <!-- Linea Separadora 2 -->
+            <TextView
+                android:id="@+id/line2"
+                style="?android:attr/listSeparatorTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/txt_min"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorAccent" />
+
+            <!-- Datos restantes de la estación -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line2"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/img_Hum_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/water_percent_peq" />
+
+                <TextView
+                    android:id="@+id/txtHum_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/img_Hum_detail"
+                    android:text="@string/txthum"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/sen_Hum_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/txtHum_detail"
+                    android:layout_below="@id/txtHum_detail"
+                    android:text="@string/Hum"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/unit_Hum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/sen_Hum_detail"
+                    android:layout_marginStart="3dp"
+                    android:layout_toEndOf="@+id/sen_Hum_detail"
+                    android:text="@string/unit_Hum"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+                <ImageView
+                    android:id="@+id/img_Rad_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/img_Hum_detail"
+                    android:layout_below="@id/img_Hum_detail"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/weather_rad_peq" />
+
+                <TextView
+                    android:id="@+id/txtRad_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/sen_Hum_detail"
+                    android:layout_below="@id/sen_Hum_detail"
+                    android:layout_marginTop="9dp"
+                    android:layout_toEndOf="@id/img_Rad_detail"
+                    android:text="@string/txtrad"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/sen_Rad_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/txtRad_detail"
+                    android:layout_below="@id/txtRad_detail"
+                    android:text="@string/Rad"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/unit_Rad_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/sen_Rad_detail"
+                    android:layout_marginStart="3dp"
+                    android:layout_toEndOf="@+id/sen_Rad_detail"
+                    android:text="@string/unit_Rad"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+                <ImageView
+                    android:id="@+id/img_Pre_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/img_Hum_detail"
+                    android:src="@drawable/weather_barometro_peq" />
+
+                <TextView
+                    android:id="@+id/txtPre_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/txtHum_detail"
+                    android:layout_marginStart="6dp"
+                    android:layout_toEndOf="@id/img_Pre_detail"
+                    android:text="Pre:"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/sen_Pre_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/txtPre_detail"
+                    android:layout_below="@id/txtPre_detail"
+                    android:text="1004.2"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/sen_Pre_detail"
+                    android:layout_marginStart="2dp"
+                    android:layout_toEndOf="@id/sen_Pre_detail"
+                    android:text="mb"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+                <ImageView
+                    android:id="@+id/img_UV_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/img_Pre_detail"
+                    android:layout_below="@id/img_Pre_detail"
+                    android:layout_marginTop="12dp"
+                    android:layout_toEndOf="@id/img_Hum_detail"
+                    android:src="@drawable/weather_uv_peq" />
+
+                <TextView
+                    android:id="@+id/txt_UV_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/txtRad_detail"
+                    android:layout_alignStart="@id/txtPre_detail"
+                    android:text="UV:"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/Sen_UV_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/sen_Rad_detail"
+                    android:layout_alignStart="@id/txt_UV_detail"
+                    android:text="1.2"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+                <ImageView
+                    android:id="@+id/img_Vie_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toEndOf="@id/img_Pre_detail"
+                    android:src="@drawable/weather_windy_peq" />
+
+                <TextView
+                    android:id="@+id/txt_Vie_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/txtPre_detail"
+                    android:layout_marginStart="4dp"
+                    android:layout_toEndOf="@id/img_Vie_detail"
+                    android:text="Vie:"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/sen_Vie_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/txt_Vie_detail"
+                    android:layout_below="@id/txt_Vie_detail"
+                    android:text="14.5"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/unit_Vie_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/sen_Vie_detail"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toEndOf="@id/sen_Vie_detail"
+                    android:text="Km/h"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+                <ImageView
+                    android:id="@+id/img_Llu_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/img_Vie_detail"
+                    android:layout_below="@id/img_Vie_detail"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/weather_pouring_peq" />
+
+                <TextView
+                    android:id="@+id/txtLlu_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/txt_UV_detail"
+                    android:layout_alignStart="@id/txt_Vie_detail"
+                    android:text="Llu:"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/sen_Llu_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/txtLlu_detail"
+                    android:layout_below="@id/txtLlu_detail"
+                    android:text="0.0"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/unit_Llu_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/sen_Llu_detail"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toEndOf="@id/sen_Llu_detail"
+                    android:text="mm"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+                <ImageView
+                    android:id="@+id/img_ET_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toEndOf="@id/img_Vie_detail"
+                    android:src="@drawable/weather_evapotranspiracion_peq" />
+
+                <TextView
+                    android:id="@+id/txt_ET_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/txt_Vie_detail"
+                    android:layout_marginStart="4dp"
+                    android:layout_toEndOf="@id/img_ET_detail"
+                    android:text="ET:"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/sen_ET_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/txt_ET_detail"
+                    android:layout_below="@id/txt_ET_detail"
+                    android:text="2.18"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/sen_ET_detail"
+                    android:layout_marginStart="2dp"
+                    android:layout_toEndOf="@id/sen_ET_detail"
+                    android:text="mm"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+                <ImageView
+                    android:id="@+id/img_pt_Rocio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/img_ET_detail"
+                    android:layout_below="@id/img_ET_detail"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/weather_llovizna" />
+
+                <TextView
+                    android:id="@+id/txt_pt_Rocio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/txtLlu_detail"
+                    android:layout_marginStart="2dp"
+                    android:layout_toEndOf="@id/img_pt_Rocio"
+                    android:text="Rocio:"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="9sp"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/sen_rocio_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/txt_pt_Rocio"
+                    android:layout_below="@id/txt_pt_Rocio"
+                    android:text="16.2"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/unit_rocio_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/sen_rocio_detail"
+                    android:layout_marginStart="2dp"
+                    android:layout_toEndOf="@id/sen_rocio_detail"
+                    android:text="°C"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!-- ############### HUMEDAD ############### -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="20dp"
+            android:background="#4a000000"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/humedad_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Humedad"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Linea Separadora -->
+            <TextView
+                android:id="@id/line"
+                style="?android:attr/listSeparatorTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorAccent" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout_humedad"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.5">
+
+                    <ImageView
+                        android:id="@+id/img_Humedad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/value_Humedad"
+                        android:layout_toStartOf="@id/value_Humedad"
+                        android:baselineAlignBottom="true"
+                        android:src="@drawable/ic_gotas" />
+
+                    <TextView
+                        android:id="@+id/value_Humedad"
+                        style="@android:style/Widget.Material.Light.TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="6dp"
+                        android:elegantTextHeight="true"
+                        android:text="18.1"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="50sp" />
+
+                    <TextView
+                        android:id="@id/unit_Hum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/value_Humedad"
+                        android:layout_toEndOf="@id/value_Humedad"
+                        android:text="%"
+                        android:textColor="@color/colorAccent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_Humedad"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:text="Humedad"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="9sp" />
+
+                    <ImageView
+                        android:id="@+id/feels_viento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/sense"
+                        android:layout_marginEnd="4dp"
+                        android:layout_toStartOf="@id/sense"
+                        android:src="@drawable/feels_viento" />
+
+                    <TextView
+                        android:id="@+id/sense"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp"
+                        android:text="Sensación"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/sense"
+                        android:layout_alignStart="@id/sense"
+                        android:text="Muy Humedo"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="10sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toEndOf="@id/relativeLayout_humedad"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.5"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/mes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mes"
+                        android:layout_marginStart="4dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <!-- Linea Separadora -->
+                    <TextView
+                        android:id="@id/line"
+                        style="?android:attr/listSeparatorTextViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorAccent"
+                        android:layout_below="@id/mes"/>
+
+                    <TextView
+                        android:id="@id/txt_max"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/value_hum_max_mes"
+                        android:layout_alignBaseline="@id/value_hum_max_mes"
+                        android:text="Max:"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/value_hum_max_mes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="2dp"
+                        android:layout_below="@id/mes"
+                        android:layout_marginLeft="8dp"
+                        android:text="94"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@id/unit_Hum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="%"
+                        android:layout_toEndOf="@id/value_hum_max_mes"
+                        android:layout_alignBaseline="@id/value_hum_max_mes"
+                        android:textColor="@color/colorAccent"
+                        android:layout_marginLeft="2dp"/>
+
+                    <TextView
+                        android:id="@id/txt_min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/txt_max"
+                        android:layout_toStartOf="@id/value_hum_min_mes"
+                        android:layout_alignBaseline="@id/value_hum_min_mes"
+                        android:layout_marginRight="2dp"
+                        android:text="Min:"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/value_hum_min_mes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="2dp"
+                        android:layout_below="@id/value_hum_max_mes"
+                        android:text="78"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="%"
+                        android:layout_toEndOf="@id/value_hum_min_mes"
+                        android:layout_alignBaseline="@id/value_hum_min_mes"
+                        android:textColor="@color/colorAccent"
+                        android:layout_marginLeft="2dp"/>
+
+                    <TextView
+                        android:id="@+id/año"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Año"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_alignStart="@id/mes"
+                        android:layout_below="@id/mes"
+                        android:layout_marginTop="40dp"/>
+
+                    <!-- Linea Separadora -->
+                    <TextView
+                        android:id="@id/line"
+                        style="?android:attr/listSeparatorTextViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorAccent"
+                        android:layout_below="@id/año"/>
+
+                    <TextView
+                        android:id="@id/txt_max"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/value_hum_max_year"
+                        android:layout_alignBaseline="@id/value_hum_max_year"
+                        android:text="Max:"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/value_hum_max_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="2dp"
+                        android:layout_below="@id/año"
+                        android:layout_marginLeft="8dp"
+                        android:text="97"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@id/unit_Hum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="%"
+                        android:layout_toEndOf="@id/value_hum_max_year"
+                        android:layout_alignBaseline="@id/value_hum_max_year"
+                        android:textColor="@color/colorAccent"
+                        android:layout_marginLeft="2dp"/>
+
+                    <TextView
+                        android:id="@id/txt_min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/txt_max"
+                        android:layout_toStartOf="@id/value_hum_min_year"
+                        android:layout_alignBaseline="@id/value_hum_min_year"
+                        android:layout_marginRight="2dp"
+                        android:text="Min:"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/value_hum_min_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="2dp"
+                        android:layout_below="@id/value_hum_max_year"
+                        android:text="78"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="%"
+                        android:layout_toEndOf="@id/value_hum_min_year"
+                        android:layout_alignBaseline="@id/value_hum_min_year"
+                        android:textColor="@color/colorAccent"
+                        android:layout_marginLeft="2dp"/>
+                </RelativeLayout>
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+
+        <!-- ############### PRECIPITACIÓN ############### -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="20dp"
+            android:background="#4a000000"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/Precipitacion_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Precipitacion"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Linea Separadora -->
+            <TextView
+                android:id="@id/line"
+                style="?android:attr/listSeparatorTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorAccent" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout_precipitacion"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.5">
+
+                    <ImageView
+                        android:id="@+id/img_precipitacion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/value_precipitacion"
+                        android:layout_toStartOf="@id/value_precipitacion"
+                        android:baselineAlignBottom="true"
+                        android:src="@drawable/ic_beaker" />
+
+                    <TextView
+                        android:id="@+id/value_precipitacion"
+                        style="@android:style/Widget.Material.Light.TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="6dp"
+                        android:elegantTextHeight="true"
+                        android:text="11.2"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="50sp" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/value_precipitacion"
+                        android:layout_toEndOf="@id/value_precipitacion"
+                        android:text="mm"
+                        android:textColor="@color/colorAccent" />
+
+                    <TextView
+                        android:id="@+id/txt_preci"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_precipitacion"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:text="precipitacion"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="9sp" />
+
+                    <ImageView
+                        android:id="@+id/chance_precipitation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/txt_chance_precipitation"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_toStartOf="@id/txt_chance_precipitation"
+                        android:src="@drawable/ic_chance_precipitation" />
+
+                    <TextView
+                        android:id="@+id/txt_chance_precipitation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="15dp"
+                        android:text="probabilidad\nde precipitacion"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:id="@+id/value_chaPrecipitation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/txt_chance_precipitation"
+                        android:layout_alignStart="@id/txt_chance_precipitation"
+                        android:text="0"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="10sp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/value_chaPrecipitation"
+                        android:layout_toEndOf="@id/value_chaPrecipitation"
+                        android:text="%"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="10sp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toEndOf="@id/relativeLayout_precipitacion"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.5"
+                    android:padding="8dp">
+
+
+                </RelativeLayout>
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+        <!-- ############### TEMPERATURA ############### -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="20dp"
+            android:background="#4a000000"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/Temperatura_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperatura"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Linea Separadora -->
+            <TextView
+                android:id="@+id/line4"
+                style="?android:attr/listSeparatorTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorAccent" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
+                app:layout_constraintStart_toEndOf="@+id/relativeLayout">
+
+                <!-- Temperatura detalle -->
+                <RelativeLayout
+                    android:id="@+id/temperatureLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.5">
+
+                    <ImageView
+                        android:id="@+id/img_Temperature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/value_Temperature"
+                        android:layout_toStartOf="@id/value_Temperature"
+                        android:baselineAlignBottom="true"
+                        android:src="@drawable/termometro" />
+
+                    <TextView
+                        android:id="@+id/value_Temperature"
+                        style="@android:style/Widget.Material.Light.TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="6dp"
+                        android:elegantTextHeight="true"
+                        android:text="19.4"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="50sp" />
+
+                    <TextView
+                        android:id="@+id/unit_Temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_toEndOf="@id/value_Temperature"
+                        android:text="°C"
+                        android:textColor="@color/colorAccent" />
+
+                    <TextView
+                        android:id="@+id/txt_temperature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_Temperature"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:text="Temperatura"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="9sp"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@id/txt_max"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_below="@id/txt_temperature"
+                        android:text="Max:"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@id/tmp_max"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/txt_max"
+                        android:layout_marginStart="2dp"
+                        android:layout_toEndOf="@id/txt_max"
+                        android:text="19.8"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@id/txt_unit_max"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/tmp_max"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toEndOf="@id/tmp_max"
+                        android:text="°C a"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@id/time_max"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/txt_unit_max"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toEndOf="@id/txt_unit_max"
+                        android:text="11:15 am"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@id/txt_min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/txt_max"
+                        android:layout_below="@id/txt_max"
+                        android:text="Min:"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@id/tmp_min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/txt_min"
+                        android:layout_marginStart="2dp"
+                        android:layout_toEndOf="@id/txt_min"
+                        android:text="16.4"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@id/txt_unit_min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/tmp_min"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toEndOf="@id/tmp_min"
+                        android:text="°C a"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@id/time_min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/txt_unit_min"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toEndOf="@id/txt_unit_min"
+                        android:text="4:35 am"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp" />
+
+
+
+                </RelativeLayout>
+
+                <!-- Temperatura mas detalle-->
+                <RelativeLayout
+                    android:id="@+id/detalleTempLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toEndOf="@id/temperatureLayout"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.5"
+                    android:padding="4dp">
+
+
+                </RelativeLayout>
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+
+        <!-- ############### VIENTO ############### -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="80dp"
+            android:layout_marginTop="20dp"
+            android:background="#4a000000"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/Viento_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Viento"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Linea Separadora -->
+            <TextView
+                android:id="@+id/line5"
+                style="?android:attr/listSeparatorTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorAccent" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/wind_anim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/wind_anim" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

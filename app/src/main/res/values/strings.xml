@@ -23,15 +23,40 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="enterpriseLogo">Logo de la Empresa</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="reportes">Reportes</string>
+    <string name="filtro_inteligente">Filtro Inteligente</string>
+    <string name="ubicaci_n_de_equipos">Ubicación de Equipos</string>
+    <string name="ajustes">Ajustes</string>
+    <string name="acerca_de_nosotros">Acerca de Nosotros</string>
+    <string name="opciones_adicionales">Opciones Adicionales</string>
+    <string name="logout">Cerrar Sesión</string>
 
     <!-- CardView -->
     <string name="connected">Online:</string>
-    <string name="Vie"> Vie:\n1.2 Km/h</string>
-    <string name="Pre"> Pre:\n1000.9 mb</string>
-    <string name="llu"> Llu:\n3.2 mm</string>
-    <string name="UV">UV:\n5.3</string>
+    <string name="Hum">80.4</string>
+    <string name="ET">1.6</string>
+    <string name="Rad">186</string>
+    <string name="UV">1.1</string>
     <string name="lastUpdate">fecha, Hora</string>
+    <string name="unit_Hum">%</string>
+    <string name="txthum">Hum:</string>
+    <string name="txtet">ET:</string>
+    <string name="txtrad">Rad:</string>
+    <string name="unit_ET">mm</string>
+    <string name="unit_Rad">W/m<sup><small>2</small></sup></string>
 
+    <!-- About Us -->
+    <string name="aboutUs">
+        Somos una empresa Joven y dinámica, fundada en Abril del año 2009 bajo el propósito de consolidarnos como
+        una empresa Líder a nivel local, regional y nacional con el único objetivo de lograr la máxima satisfacción
+        de nuestros clientes.\n\nNos dedicamos con mucho éxito al rubro de las Telecomunicaciones, Seguridad Electrónica,
+        Energía Solar,Estaciones Agro Meteorológicas y GPS. Somos distribuidores de marcas de reconocido prestigio mundial,
+        contamos con personal altamente calificado y equipo de laboratorio de alta tecnología que garantiza un servicio
+        eficiente y seguro.\n\nEstamos orientados hacia la calidad y eficiencia. Trabajamos en la búsqueda de nuevas
+        alternativas de comunicación para la conveniencia de nuestros clientes.
+    </string>
+    <string name="encuentranos">Ubícanos en:</string>
 
 
 </resources>
